@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul — Freelance Web Designer & Digital Menus for Local Businesses</title>
+    <meta name="description" content="Professional websites, digital menus, and QR experiences designed for restaurants, cafés, bakeries, and growing local businesses.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF9F6', /* Warm off-white */
+                            surface: '#FFFFFF',
+                            text: '#1C1C1E', /* Deep charcoal */
+                            muted: '#6E6E73',
+                            accent: '#D97706', /* Subtle warm gold / orange */
+                            'accent-hover': '#B45309',
+                            border: '#E5E5EA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF9F6;
+            color: #1C1C1E;
+        }
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- STICKY NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold tracking-tight text-brand-text flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-brand-accent text-white flex items-center justify-center font-semibold text-sm">A</span>
+                Abdul
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+                <a href="#home" class="hover:text-brand-text transition-colors">Home</a>
+                <a href="#services" class="hover:text-brand-text transition-colors">Services</a>
+                <a href="#work" class="hover:text-brand-text transition-colors">Work</a>
+                <a href="#process" class="hover:text-brand-text transition-colors">Process</a>
+                <a href="#pricing" class="hover:text-brand-text transition-colors">Pricing</a>
+                <a href="#about" class="hover:text-brand-text transition-colors">About</a>
+                <a href="#contact" class="hover:text-brand-text transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="bg-brand-accent hover:bg-brand-accent-hover text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm hover:shadow">
+                    Get a Free Demo
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden p-2 rounded-lg text-brand-text hover:bg-brand-border/50 focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-brand-surface border-b border-brand-border shadow-lg px-6 py-6 space-y-4">
+            <a href="#home" class="block text-base font-medium text-brand-text py-1 mobile-link">Home</a>
+            <a href="#services" class="block text-base font-medium text-brand-text py-1 mobile-link">Services</a>
+            <a href="#work" class="block text-base font-medium text-brand-text py-1 mobile-link">Work</a>
+            <a href="#process" class="block text-base font-medium text-brand-text py-1 mobile-link">Process</a>
+            <a href="#pricing" class="block text-base font-medium text-brand-text py-1 mobile-link">Pricing</a>
+            <a href="#about" class="block text-base font-medium text-brand-text py-1 mobile-link">About</a>
+            <a href="#contact" class="block text-base font-medium text-brand-text py-1 mobile-link">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="block w-full text-center bg-brand-accent text-white px-5 py-3 rounded-full text-sm font-semibold mobile-link">
+                    Get a Free Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-brand-accent text-xs font-semibold tracking-wide uppercase">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        Local Business Web Designer
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-brand-text">
+                        I Build Websites That Help Local Businesses Look Better Online.
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-brand-muted leading-relaxed max-w-2xl">
+                        Professional websites, digital menus and QR experiences designed for restaurants, cafés, bakeries and growing local businesses.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="#contact" class="bg-brand-accent hover:bg-brand-accent-hover text-white px-8 py-4 rounded-full font-semibold text-center transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                            Get a Free Demo
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#work" class="bg-white hover:bg-brand-border/50 text-brand-text border border-brand-border px-8 py-4 rounded-full font-semibold text-center transition-all flex items-center justify-center gap-2">
+                            View My Work
+                        </a>
+                    </div>
+
+                    <!-- Trust Line -->
+                    <div class="pt-6 border-t border-brand-border/60 text-xs sm:text-sm font-medium text-brand-muted flex flex-wrap items-center gap-y-2 gap-x-4">
+                        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Web Design</span>
+                        <span class="hidden sm:inline text-brand-border">•</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Digital Menus</span>
+                        <span class="hidden sm:inline text-brand-border">•</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> QR Menus</span>
+                        <span class="hidden sm:inline text-brand-border">•</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Local Websites</span>
+                    </div>
+                </div>
+
+                <!-- Right Visual Mockup Column -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Background glow effect -->
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-amber-100 to-orange-50 rounded-3xl -z-10 blur-xl opacity-70"></div>
+                        
+                        <!-- Laptop Mockup Container -->
+                        <div class="bg-brand-text p-3 rounded-2xl shadow-2xl border border-neutral-800">
+                            <div class="flex items-center gap-1.5 mb-2 px-1">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                                <div class="mx-auto text-[10px] text-neutral-400 font-mono">goldentoastbakery.com</div>
+                            </div>
+                            <div class="bg-white rounded-lg overflow-hidden border border-neutral-200">
+                                <div class="bg-amber-900 text-amber-50 p-4 text-center">
+                                    <p class="text-xs uppercase tracking-widest text-amber-300 font-semibold">Artisanal Bakery & Café</p>
+                                    <h3 class="text-xl font-bold font-serif mt-1">Golden Toast Bakery</h3>
+                                    <p class="text-xs text-amber-100 mt-1">Freshly baked daily • Coffee & Pastries</p>
+                                </div>
+                                <div class="p-4 bg-amber-50/50 grid grid-cols-2 gap-3">
+                                    <div class="bg-white p-3 rounded-lg border border-amber-100 shadow-sm">
+                                        <div class="h-16 bg-amber-100 rounded mb-2 flex items-center justify-center text-amber-800 font-serif font-bold text-sm">Croissant</div>
+                                        <p class="text-xs font-semibold text-brand-text">Butter Croissant</p>
+                                        <p class="text-xs text-brand-accent font-bold mt-1">₹120</p>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-amber-100 shadow-sm">
+                                        <div class="h-16 bg-amber-100 rounded mb-2 flex items-center justify-center text-amber-800 font-serif font-bold text-sm">Coffee</div>
+                                        <p class="text-xs font-semibold text-brand-text">Artisanal Latte</p>
+                                        <p class="text-xs text-brand-accent font-bold mt-1">₹180</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Smartphone Mockup Overlay -->
+                        <div class="absolute -bottom-6 -left-6 w-36 sm:w-44 bg-brand-text p-2 rounded-2xl shadow-xl border-4 border-white hidden sm:block">
+                            <div class="bg-white rounded-xl overflow-hidden p-2 text-center">
+                                <div class="w-8 h-1 bg-neutral-300 rounded-full mx-auto mb-2"></div>
+                                <p class="text-[10px] font-bold text-brand-text">Scan for QR Menu</p>
+                                <div class="my-2 p-2 bg-neutral-100 rounded flex items-center justify-center">
+                                    <!-- Simple QR graphic representation -->
+                                    <div class="w-12 h-12 bg-neutral-900 rounded grid grid-cols-3 gap-0.5 p-1">
+                                        <div class="bg-white"></div><div class="bg-white"></div><div class="bg-white"></div>
+                                        <div class="bg-white"></div><div class="bg-neutral-900"></div><div class="bg-white"></div>
+                                        <div class="bg-white"></div><div class="bg-white"></div><div class="bg-white"></div>
+                                    </div>
+                                </div>
+                                <span class="text-[9px] text-brand-muted block">Instant phone access</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ABDUL -->
+    <section id="about" class="py-20 bg-white border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Profile Image Placeholder Column -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm bg-brand-bg rounded-3xl p-6 border border-brand-border text-center shadow-sm relative">
+                        <div class="w-48 h-48 mx-auto rounded-2xl bg-amber-100 flex items-center justify-center text-brand-accent mb-6 shadow-inner border border-amber-200">
+                            <i data-lucide="user" class="w-24 h-24 stroke-[1.5]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-brand-text">Abdul</h3>
+                        <p class="text-sm text-brand-muted mt-1">Freelance Web Designer</p>
+                        <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-center gap-2 text-xs text-brand-muted">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-accent"></i>
+                            Working with local businesses
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bg border border-brand-border text-brand-muted text-xs font-semibold tracking-wide uppercase">
+                        About The Designer
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-brand-text">
+                        Hi, I'm Abdul.
+                    </h2>
+                    
+                    <p class="text-lg text-brand-muted leading-relaxed">
+                        I'm a freelance web designer focused on creating clean, modern and mobile-friendly websites for local businesses. I help businesses turn their ideas, menus and services into professional online experiences that customers can easily access from their phones.
+                    </p>
+
+                    <p class="text-base text-brand-muted leading-relaxed">
+                        Whether you run a cosy café, a bustling restaurant, a local bakery, or a neighborhood gym, having an online presence shouldn't be complicated or stressful. I work directly with business owners to build simple, effective digital solutions without the agency hassle.
+                    </p>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div>
+                            <span class="block text-2xl font-bold text-brand-text">1-on-1</span>
+                            <span class="text-xs text-brand-muted">Direct communication</span>
+                        </div>
+                        <div class="h-8 w-px bg-brand-border"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-brand-text">Fast</span>
+                            <span class="text-xs text-brand-muted">Reliable turnaround</span>
+                        </div>
+                        <div class="h-8 w-px bg-brand-border"></div>
+                        <div>
+                            <span class="block text-2xl font-bold text-brand-text">Mobile-First</span>
+                            <span class="text-xs text-brand-muted">Built for phone users</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">What I Create</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Tailored Services for Local Businesses</h2>
+                <p class="text-brand-muted mt-3 text-lg">Everything you need to showcase your business and attract customers online and offline.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">01 — Restaurant Websites</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Restaurant Websites</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Modern websites designed specifically for restaurants, cafés and food businesses to highlight dishes and atmosphere.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="qr-code" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">02 — Digital QR Menus</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Digital QR Menus</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Mobile-friendly menus that customers can open instantly by scanning a QR code right at their table.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="store" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">03 — Business Websites</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Business Websites</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Professional websites for local businesses, salons, gyms and shops that need a strong and trustworthy online presence.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">04 — Mobile-First</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Mobile-Friendly Design</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Every website is carefully designed to work beautifully and load quickly on phones, tablets and computers.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">05 — Integrations</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Google & Contact Integration</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Include Google Maps directions, direct phone calls, WhatsApp chat, Instagram links and important business details.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl border border-brand-border shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-bold text-brand-accent tracking-widest uppercase">06 — Redesigns</span>
+                    <h3 class="text-xl font-bold text-brand-text mt-2 mb-3">Website Redesign</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Transform outdated or slow websites into clean, modern and mobile-friendly experiences that impress customers.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- QR MENU SPECIAL SECTION -->
+    <section class="py-24 bg-white border-y border-brand-border overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-brand-accent text-xs font-semibold tracking-wide uppercase">
+                        <i data-lucide="scan" class="w-3.5 h-3.5"></i>
+                        Offline to Online
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-brand-text">
+                        A Menu Customers Can Open With One Scan.
+                    </h2>
+                    
+                    <p class="text-lg text-brand-muted leading-relaxed">
+                        Customers sit down at your table, scan a QR code with their phone camera, and your menu opens instantly. No app downloads required.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-amber-100 text-brand-accent flex items-center justify-center text-xs font-bold">✓</div>
+                            <span class="text-brand-text font-medium text-sm">No app required — opens directly in any phone browser</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-amber-100 text-brand-accent flex items-center justify-center text-xs font-bold">✓</div>
+                            <span class="text-brand-text font-medium text-sm">Easy to update prices and items anytime</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-full bg-amber-100 text-brand-accent flex items-center justify-center text-xs font-bold">✓</div>
+                            <span class="text-brand-text font-medium text-sm">Custom designed with your restaurant's branding & photos</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-brand-text hover:bg-neutral-800 text-white px-7 py-3.5 rounded-full font-semibold text-sm transition-all shadow-sm">
+                            Create My Digital Menu
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual Mockup for Table / QR -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-full max-w-md bg-brand-bg rounded-3xl p-8 border border-brand-border shadow-lg relative">
+                        <div class="text-center mb-6">
+                            <span class="text-xs uppercase tracking-widest text-brand-muted font-semibold">Table Experience Concept</span>
+                            <h4 class="text-xl font-bold text-brand-text mt-1">Scan & Browse Menu</h4>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm text-center space-y-4">
+                            <div class="w-28 h-28 mx-auto bg-neutral-900 rounded-xl p-3 flex items-center justify-center shadow-md">
+                                <div class="w-full h-full bg-white rounded grid grid-cols-4 gap-1 p-1">
+                                    <div class="bg-neutral-900"></div><div class="bg-white"></div><div class="bg-neutral-900"></div><div class="bg-neutral-900"></div>
+                                    <div class="bg-white"></div><div class="bg-neutral-900"></div><div class="bg-white"></div><div class="bg-neutral-900"></div>
+                                    <div class="bg-neutral-900"></div><div class="bg-neutral-900"></div><div class="bg-neutral-900"></div><div class="bg-white"></div>
+                                    <div class="bg-white"></div><div class="bg-neutral-900"></div><div class="bg-white"></div><div class="bg-neutral-900"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-brand-text">Point Phone Camera</p>
+                                <p class="text-xs text-brand-muted mt-0.5">Instant access to dishes, prices & photos</p>
+                            </div>
+                            <div class="pt-2 border-t border-brand-border flex justify-around text-xs text-brand-muted font-medium">
+                                <span class="flex items-center gap-1"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-brand-accent"></i> Fast Loading</span>
+                                <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-brand-accent"></i> Always Updated</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED WORK (DEMO CONCEPTS) -->
+    <section id="work" class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Featured Work & Concepts</h2>
+                    <p class="text-brand-muted mt-2 text-lg">Explore examples of websites and digital menus designed for local businesses.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <span class="inline-block text-xs bg-amber-100 text-brand-accent font-semibold px-3 py-1 rounded-full border border-amber-200">
+                        Concept Project Examples
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Golden Toast Bakery -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="bg-amber-900 text-amber-50 p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-amber-800/80 text-amber-200 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border border-amber-700">
+                            Concept Project
+                        </div>
+                        <span class="text-xs font-medium text-amber-300 uppercase tracking-widest">Bakery Website + Digital Menu</span>
+                        <h3 class="text-2xl font-bold font-serif mt-1">Golden Toast Bakery</h3>
+                        <p class="text-xs text-amber-100 mt-2">Fresh artisan breads, pastries, coffee & treats</p>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Cakes</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Pastries</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Breads</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Pizza</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Burgers</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Coffee</div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                            <span>Features: Menu, Hours, Location, Photos</span>
+                            <a href="#contact" class="font-semibold text-brand-accent hover:underline flex items-center gap-1">
+                                Request Similar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Royal Bites -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="bg-neutral-900 text-white p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-neutral-800 text-neutral-300 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border border-neutral-700">
+                            Concept Project
+                        </div>
+                        <span class="text-xs font-medium text-amber-400 uppercase tracking-widest">Restaurant Website + QR Menu</span>
+                        <h3 class="text-2xl font-bold mt-1">Royal Bites Restaurant</h3>
+                        <p class="text-xs text-neutral-400 mt-2">Fine dining homepage, interactive QR menu & table booking</p>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Homepage</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Food Menu</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Photos</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Location</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Contact</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">QR Menu</div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                            <span>Features: QR code table menu, Google Maps</span>
+                            <a href="#contact" class="font-semibold text-brand-accent hover:underline flex items-center gap-1">
+                                Request Similar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Urban Burger -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="bg-red-900 text-red-50 p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-red-800/80 text-red-200 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border border-red-700">
+                            Concept Project
+                        </div>
+                        <span class="text-xs font-medium text-red-300 uppercase tracking-widest">Fast Food Website</span>
+                        <h3 class="text-2xl font-bold mt-1">Urban Burger</h3>
+                        <p class="text-xs text-red-100 mt-2">Juicy burgers, crispy fries, combos & quick mobile ordering info</p>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Burgers</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Fries</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Combos</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Drinks</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Call Buttons</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Mobile Menu</div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                            <span>Features: Direct phone order, WhatsApp link</span>
+                            <a href="#contact" class="font-semibold text-brand-accent hover:underline flex items-center gap-1">
+                                Request Similar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Glow Studio -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="bg-stone-800 text-stone-100 p-6 sm:p-8 relative">
+                        <div class="absolute top-4 right-4 bg-stone-700 text-stone-300 text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full border border-stone-600">
+                            Concept Project
+                        </div>
+                        <span class="text-xs font-medium text-amber-300 uppercase tracking-widest">Salon Website</span>
+                        <h3 class="text-2xl font-bold mt-1">Glow Studio & Spa</h3>
+                        <p class="text-xs text-stone-300 mt-2">Professional salon services, pricing, gallery & appointment booking</p>
+                    </div>
+                    <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Services</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Gallery</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Pricing</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Book Button</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Location</div>
+                            <div class="bg-brand-bg p-2 rounded border border-brand-border font-medium text-brand-text">Hours</div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                            <span>Features: Service list, WhatsApp appointment</span>
+                            <a href="#contact" class="font-semibold text-brand-accent hover:underline flex items-center gap-1">
+                                Request Similar <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE / AFTER SECTION -->
+    <section class="py-24 bg-white border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">The Transformation</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Turn Your Business Into a Professional Digital Experience.</h2>
+                <p class="text-brand-muted mt-3 text-lg">See how moving from basic social media or paper menus to a professional website transforms customer trust.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Before -->
+                <div class="bg-neutral-100 p-8 rounded-3xl border border-neutral-200 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-block bg-neutral-200 text-neutral-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                            Before: Basic / No Online Presence
+                        </div>
+                        <h3 class="text-xl font-bold text-neutral-800 mb-4">Without a Dedicated Website</h3>
+                        
+                        <ul class="space-y-3 text-sm text-neutral-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+                                Paper menu that is hard to read or outdated
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+                                Relying only on social media posts for info
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+                                Difficult for new customers to find timings & address
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="x-circle" class="w-4 h-4 text-red-500"></i>
+                                No dedicated place to showcase your best photos
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-neutral-200 text-xs text-neutral-500 font-medium">
+                        Result: Customers struggle to find information or order.
+                    </div>
+                </div>
+
+                <!-- After -->
+                <div class="bg-amber-50/60 p-8 rounded-3xl border border-amber-200 flex flex-col justify-between relative shadow-sm">
+                    <div>
+                        <div class="inline-block bg-brand-accent text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                            After: Professional Digital Presence
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-text mb-4">With Abdul's Web Design</h3>
+                        
+                        <ul class="space-y-3 text-sm text-brand-text">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i>
+                                Clean mobile website that loads in seconds
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i>
+                                Digital QR menu right on the tables
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i>
+                                Google Maps directions and one-tap calling
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i>
+                                Professional photos, categories, prices & contact buttons
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-amber-200 text-xs text-brand-accent font-semibold">
+                        Result: Customers discover, trust, and visit your business easily.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY A WEBSITE? -->
+    <section class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Local Business Guide</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Your Customers Are Already Online.</h2>
+                <p class="text-brand-muted mt-3 text-lg">People discover local businesses through Google, Instagram, WhatsApp, QR codes, and Maps.</p>
+            </div>
+
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-brand-border shadow-sm max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold text-brand-text mb-6 text-center">A website gives customers one simple place to find:</h3>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center mb-10">
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="utensils" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Menu</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="image" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Photos</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="map-pin" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Location</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="phone" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Contact</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="clock" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Opening Hours</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="briefcase" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Services</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="share-2" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Social Media</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                        <i data-lucide="sparkles" class="w-6 h-6 mx-auto text-brand-accent mb-2"></i>
+                        <span class="text-sm font-semibold text-brand-text">Special Offers</span>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl text-center text-sm text-brand-text">
+                    <p class="font-medium">A professional website gives your business another easy way for customers to discover and learn about you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-24 bg-white border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Simple Steps</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">How We Work Together</h2>
+                <p class="text-brand-muted mt-3 text-lg">No complicated jargon or tech stress. Just a straightforward 4-step process.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="bg-brand-bg p-8 rounded-3xl border border-brand-border relative">
+                    <span class="text-3xl font-bold text-brand-accent/40 block mb-4">01</span>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">Tell Me About Your Business</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Share your business name, services, menu and goals through the contact form or WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-brand-bg p-8 rounded-3xl border border-brand-border relative">
+                    <div class="absolute -top-3 right-6 bg-brand-accent text-white text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full">
+                        Key Difference
+                    </div>
+                    <span class="text-3xl font-bold text-brand-accent/40 block mb-4">02</span>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">Get a Free Demo</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Abdul creates a visual concept so you can see what your business could look like online before committing.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-brand-bg p-8 rounded-3xl border border-brand-border relative">
+                    <span class="text-3xl font-bold text-brand-accent/40 block mb-4">03</span>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">Customize</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Choose the design, content, colors, photos and features that fit your brand.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-brand-bg p-8 rounded-3xl border border-brand-border relative">
+                    <span class="text-3xl font-bold text-brand-accent/40 block mb-4">04</span>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">Launch</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed">
+                        Your finished website or digital menu is published and ready for your customers to access.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Transparent Investment</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Simple, Affordable Pricing</h2>
+                <p class="text-brand-muted mt-3 text-lg">Clear starting rates designed for local businesses and independent owners.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Starter -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-brand-muted uppercase tracking-widest">Starter</span>
+                        <h3 class="text-xl font-bold text-brand-text mt-1">Digital QR Menu</h3>
+                        <div class="my-6">
+                            <span class="text-3xl font-bold text-brand-text">₹1,500 – ₹2,500</span>
+                            <span class="text-xs text-brand-muted block mt-1">Starting price</span>
+                        </div>
+                        
+                        <ul class="space-y-3 text-sm text-brand-muted border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Mobile menu design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> QR code generation</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Food categories</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Photos & prices</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Contact button</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-8">
+                        <a href="#contact" class="block w-full text-center bg-brand-bg hover:bg-brand-border/60 text-brand-text border border-brand-border py-3 rounded-full font-semibold text-sm transition-all">
+                            Ask About Starter
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Business (Most Popular) -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-brand-accent shadow-md flex flex-col justify-between relative">
+                    <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-brand-accent text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-sm">
+                        Most Popular
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">Business</span>
+                        <h3 class="text-xl font-bold text-brand-text mt-1">Business Website</h3>
+                        <div class="my-6">
+                            <span class="text-3xl font-bold text-brand-text">₹3,000 – ₹5,000</span>
+                            <span class="text-xs text-brand-muted block mt-1">Starting price</span>
+                        </div>
+                        
+                        <ul class="space-y-3 text-sm text-brand-muted border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Modern homepage</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Menu or services section</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Photo gallery</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Google Maps integration</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> WhatsApp chat button</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Fully mobile responsive</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-8">
+                        <a href="#contact" class="block w-full text-center bg-brand-accent hover:bg-brand-accent-hover text-white py-3 rounded-full font-semibold text-sm transition-all shadow-sm">
+                            Ask About Business
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Complete -->
+                <div class="bg-white p-8 rounded-3xl border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-brand-muted uppercase tracking-widest">Complete</span>
+                        <h3 class="text-xl font-bold text-brand-text mt-1">Website + QR Menu</h3>
+                        <div class="my-6">
+                            <span class="text-3xl font-bold text-brand-text">₹5,000 – ₹7,500</span>
+                            <span class="text-xs text-brand-muted block mt-1">Starting price</span>
+                        </div>
+                        
+                        <ul class="space-y-3 text-sm text-brand-muted border-t border-brand-border pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Full business website</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Digital QR menu system</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Gallery & Google Maps</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> WhatsApp & social links</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-accent"></i> Premium mobile optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-8">
+                        <a href="#contact" class="block w-full text-center bg-brand-bg hover:bg-brand-border/60 text-brand-text border border-brand-border py-3 rounded-full font-semibold text-sm transition-all">
+                            Ask About Complete
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-8 text-center text-xs text-brand-muted">
+                * Final pricing depends on business requirements and specific custom features needed.
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILDING MY CLIENT PORTFOLIO (HONEST TESTIMONIALS SECTION) -->
+    <section class="py-20 bg-white border-y border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Client Portfolio</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-text">Building My Client Portfolio</h2>
+            <p class="text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed">
+                I'm currently working with local businesses and building a portfolio of real-world projects. Early clients receive dedicated attention and custom design support.
+            </p>
+            <div class="pt-4">
+                <a href="#contact" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white px-8 py-3.5 rounded-full font-semibold text-sm transition-all shadow-sm">
+                    Be One of My First Featured Businesses
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-brand-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-text mt-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Do I need technical knowledge?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        No. Abdul handles the design, development, and technical setup from start to finish. You just share your business details and content.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Can I use the website on my phone?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        Yes. Every website and digital menu is specifically designed to be fully mobile-friendly and look great on any smartphone.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Can I put a QR code on my tables?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        Yes. A custom QR code is generated for your business that can be placed on your tables, counters, or windows to open your digital menu directly.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Can you redesign my existing website?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        Yes. Abdul can transform your outdated or slow website into a clean, modern, and mobile-optimized experience.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Do I need online ordering?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        No. A website can simply provide your menu, information, photos, and contact options. Ordering can continue through phone calls or your existing system.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-sm">
+                    <h3 class="text-base font-bold text-brand-text flex items-center justify-between cursor-pointer">
+                        <span>Can I see a demo before paying?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-muted"></i>
+                    </h3>
+                    <p class="text-brand-muted text-sm mt-3 leading-relaxed">
+                        Yes. Abdul offers a free visual demo for suitable local businesses so you can see what your concept looks like before deciding.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-white border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-accent text-xs font-semibold uppercase tracking-wider">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-brand-text">
+                        Let's Build Something For Your Business.
+                    </h2>
+                    <p class="text-brand-muted text-lg leading-relaxed">
+                        Have a restaurant, café, bakery, salon or local business? Send Abdul your business details and get a free website or digital-menu concept.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-brand-muted uppercase tracking-wider font-medium">WhatsApp Me</span>
+                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">+91 YOUR_WHATSAPP_NUMBER</span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:YOUR_EMAIL_ADDRESS" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
+                            <div class="w-10 h-10 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center font-bold">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-brand-muted uppercase tracking-wider font-medium">Email Me</span>
+                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">YOUR_EMAIL_ADDRESS</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-brand-bg p-8 sm:p-10 rounded-3xl border border-brand-border shadow-sm">
+                    <form id="demo-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Your Name *</label>
+                                <input type="text" id="form-name" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Rahul Sharma">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Business Name *</label>
+                                <input type="text" id="form-business" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Sharma Bakery">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Business Type *</label>
+                                <input type="text" id="form-type" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Café, Restaurant, Salon">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Phone / WhatsApp *</label>
+                                <input type="tel" id="form-phone" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. +91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">What do you need? *</label>
+                            <select id="form-service" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors">
+                                <option value="Restaurant Website">Restaurant Website</option>
+                                <option value="Digital QR Menu">Digital QR Menu</option>
+                                <option value="Business Website">Business Website</option>
+                                <option value="Website Redesign">Website Redesign</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Message or Details</label>
+                            <textarea id="form-message" rows="4" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors resize-none" placeholder="Tell me a bit about your business and goals..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-semibold py-4 rounded-xl text-sm transition-all shadow-md hover:shadow flex items-center justify-center gap-2">
+                            Request Free Demo
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+
+                        <div id="form-success" class="hidden text-center text-sm font-semibold text-green-600 bg-green-50 p-3 rounded-xl border border-green-200">
+                            Thank you! Your demo request has been received. Abdul will contact you soon.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-24 bg-amber-900 text-amber-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+                Your Business Deserves More Than a Social Media Page.
+            </h2>
+            <p class="text-lg text-amber-100 max-w-2xl mx-auto leading-relaxed">
+                Let's create a professional digital presence that your customers can easily access from their phones.
+            </p>
+            <div class="pt-4">
+                <a href="#contact" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accent-hover text-white px-8 py-4 rounded-full font-semibold text-base transition-all shadow-lg">
+                    Get My Free Demo
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-text text-white py-16 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-neutral-800">
+                <div class="text-center md:text-left">
+                    <span class="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                        <span class="w-7 h-7 rounded-full bg-brand-accent text-white flex items-center justify-center font-semibold text-xs">A</span>
+                        Abdul
+                    </span>
+                    <p class="text-xs text-neutral-400 mt-1">Freelance Web Designer • Websites • Digital Menus • QR Experiences</p>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-sm text-neutral-300">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#work" class="hover:text-white transition-colors">Work</a>
+                    <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </nav>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
+                <p>© 2026 Abdul. All rights reserved.</p>
+                <p>Designed specifically for local businesses & independent owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Form Submission -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success');
+            const form = document.getElementById('demo-form');
+            
+            successMsg.classList.remove('hidden');
+            form.reset();
+            
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
