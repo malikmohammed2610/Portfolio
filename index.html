@@ -959,23 +959,23 @@
                     </p>
 
                     <div class="space-y-4 pt-4">
-                        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
+                        <a href="https://wa.me/6300043087" target="_blank" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
                             <div class="w-10 h-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold">
                                 <i data-lucide="message-square" class="w-5 h-5"></i>
                             </div>
                             <div>
                                 <span class="block text-xs text-brand-muted uppercase tracking-wider font-medium">WhatsApp Me</span>
-                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">+91 YOUR_WHATSAPP_NUMBER</span>
+                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">+91 6300043087</span>
                             </div>
                         </a>
 
-                        <a href="mailto:YOUR_EMAIL_ADDRESS" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
+                        <a href="mailto:k.murtasim33.k@gmail.com" class="flex items-center gap-3 p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition-all group">
                             <div class="w-10 h-10 rounded-xl bg-amber-50 text-brand-accent flex items-center justify-center font-bold">
                                 <i data-lucide="mail" class="w-5 h-5"></i>
                             </div>
                             <div>
                                 <span class="block text-xs text-brand-muted uppercase tracking-wider font-medium">Email Me</span>
-                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">YOUR_EMAIL_ADDRESS</span>
+                                <span class="text-brand-text font-semibold text-sm group-hover:text-brand-accent transition-colors">k.murtasim33.k@gmail.com</span>
                             </div>
                         </a>
                     </div>
@@ -983,32 +983,40 @@
 
                 <!-- Contact Form -->
                 <div class="lg:col-span-7 bg-brand-bg p-8 sm:p-10 rounded-3xl border border-brand-border shadow-sm">
-                    <form id="demo-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <form id="demo-form" class="space-y-6" action="https://formsubmit.co/k.murtasim33.k@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Free Demo Request - Abdul Web Design">
+                        <input type="hidden" name="_template" value="table">
+                                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Your Name *</label>
-                                <input type="text" id="form-name" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Rahul Sharma">
+                                <input type="text" name="name" id="form-name" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Rahul Sharma">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Business Name *</label>
-                                <input type="text" id="form-business" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Sharma Bakery">
+                                <input type="text" name="business" id="form-business" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Sharma Bakery">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Business Type *</label>
-                                <input type="text" id="form-type" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Café, Restaurant, Salon">
+                                <input type="text" name="business_type" id="form-type" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. Café, Restaurant, Salon">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Phone / WhatsApp *</label>
-                                <input type="tel" id="form-phone" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. +91 98765 43210">
+                                <input type="tel" name="phone" id="form-phone" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. +91 98765 43210">
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">What do you need? *</label>
-                            <select id="form-service" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors">
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Your Email *</label>
+                            <input type="email" name="email" id="form-email" required class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors" placeholder="e.g. customer@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">What do you need? *</label></label>
+                            <select name="service" id="form-service" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors">
                                 <option value="Restaurant Website">Restaurant Website</option>
                                 <option value="Digital QR Menu">Digital QR Menu</option>
                                 <option value="Business Website">Business Website</option>
@@ -1019,7 +1027,7 @@
 
                         <div>
                             <label class="block text-xs font-semibold uppercase tracking-wider text-brand-text mb-2">Message or Details</label>
-                            <textarea id="form-message" rows="4" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors resize-none" placeholder="Tell me a bit about your business and goals..."></textarea>
+                            <textarea name="message" id="form-message" rows="4" class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-text focus:outline-none focus:border-brand-accent transition-colors resize-none" placeholder="Tell me a bit about your business and goals..."></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-semibold py-4 rounded-xl text-sm transition-all shadow-md hover:shadow flex items-center justify-center gap-2">
@@ -1103,19 +1111,8 @@
             });
         });
 
-        // Form Submission handler
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const successMsg = document.getElementById('form-success');
-            const form = document.getElementById('demo-form');
-            
-            successMsg.classList.remove('hidden');
-            form.reset();
-            
-            setTimeout(() => {
-                successMsg.classList.add('hidden');
-            }, 6000);
-        }
+        // Form submission is handled securely by FormSubmit via the form action.
+        // No custom JavaScript is needed here.
     </script>
 </body>
 </html>
